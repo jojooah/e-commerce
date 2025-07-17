@@ -38,12 +38,15 @@ dependencies {
     // DB
 	runtimeOnly("com.mysql:mysql-connector-j")
 
-    // Test
+     // Test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.boot:spring-boot-testcontainers")
 	testImplementation("org.testcontainers:junit-jupiter")
 	testImplementation("org.testcontainers:mysql")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
+
 }
 
 tasks.withType<Test> {
