@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>API 문서</title>
+    <!-- Swagger UI CSS -->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swagger-ui-dist/swagger-ui.css"
+    />
+</head>
+<body>
+<div id="swagger-ui"></div>
+
+<!-- Swagger UI Bundle -->
+<script src="https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"></script>
+<script>
+    window.onload = () => {
+        SwaggerUIBundle({
+            url: "openapi.json",      // docs/ 안에 생성된 JSON 스펙
+            dom_id: "#swagger-ui",
+            presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIBundle.SwaggerUIStandalonePreset
+            ],
+            layout: "BaseLayout",
+            deepLinking: true
+        });
+    };
+</script>
+</body>
+</html>
